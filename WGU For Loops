@@ -1,0 +1,24 @@
+SetCharSPN: list[str] = ['Sam', 'Dean', 'Castiel', 'Bobby']
+DictCharSPN: dict[str, str] = {'Dean': 'Older Brother', 'Sam': 'Younger Brother',
+                               'Castiel': 'Angel', 'Bobby': 'Advisor'}
+# what I get for watching SPN while I learn coding.
+
+# iterates names in list
+for charStr in SetCharSPN:
+    print(charStr)
+
+# instructor showed how enumerate print the index position
+for i, charStr in enumerate(SetCharSPN):
+    print(charStr + ' is at position ' + str(i))
+
+# prints Hello five times (can't iterate over a number directly, so iterate over the range)
+for i in range(5):
+    print('Hello')
+
+# iterates over dictionary and prints the string
+for key in DictCharSPN:
+    print(key, 'is the', DictCharSPN[key])
+
+# alternate way of iterating over a dictionary
+for key, value in DictCharSPN.items():
+    print('{} is the {}.'.format(key, value))

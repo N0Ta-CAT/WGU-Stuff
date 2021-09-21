@@ -1,0 +1,64 @@
+# if / else statements
+def tempif(temp):
+    temp = 80
+
+    if temp <= 32:
+        print('It is below freezing.')
+    elif temp >= 60:
+        print('It is nice out.')
+    elif temp >= 90:
+        print('It is warm out.')
+    print('Have a great day!')
+
+
+def whichCookie(taste):
+    cookie = None
+    if taste == 'peanut butter':
+        cookie = 'Do-si-do'
+    elif taste == 'mint':
+        cookie = 'Thin Mint'
+    elif taste == 'caramel':
+        cookie = 'Caramel Delight'
+    elif taste == 'lemon':
+        cookie = 'Savannah Smile'
+
+    if cookie:
+        return "I'll place your order for {} cookies!".format(cookie)
+    else:
+        return "You don't like cookies?"
+
+
+listFruit = ['apples', 'pears', 'bananas', 'strawberries', 'mango']
+i = 1
+for fruit in listFruit:
+    print(str(i) + '.', fruit)
+    i += 1
+
+# define function that takes a list of integers as its argument and returns the sum of that list.
+
+def sum_list(input_list):
+    sum = 0
+    for val in input_list:
+        sum = sum + val
+    return sum
+
+# this might be really useful!
+grades = [55, 75, 69, 74, 100, 90, 0, 95, 85, 70]
+passingGrades = list()
+
+while sum(grades) > 0:
+    grade = grades.pop()
+    if grade >= 75:
+        passingGrades.append(grade)
+    passingGrades.sort()
+    print(passingGrades)
+
+def even_nums(val):
+    val_list = list()
+    i = 0
+    while i <= val:
+        val_list.append(i)
+        i = i + 2
+    return val_list
+
+

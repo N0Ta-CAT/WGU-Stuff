@@ -1,0 +1,7 @@
+# WGU module on functions
+
+def squarethis(var):
+    return var ** 2
+
+print(squarethis(4))
+
