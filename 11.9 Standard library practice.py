@@ -80,11 +80,35 @@ printMonthName(11)
 import calendar, datetime
 # Complete the function to print the full name of the day of the week
 def printWeekdayName(year, month, day):
-    days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
-    print days [(.weekday(year,month,day))
+    weekDay = calendar.weekday(year,month,day)
+    print(calendar.day_name[weekDay])
 
 # expected output: Friday
 printWeekdayName(2001, 8, 31)
 
 # expected output: Monday
 printWeekdayName(2018, 10, 1)
+
+# TASK 9
+import random
+# Complete the following function to return a random number
+# between 5 and 8 exclusive
+def getRandom():
+    return random.randrange(5,8)
+
+# expected output: You should only get 5s, 6s, and 7s
+for i in range(10):
+    print(getRandom())
+
+# TASK 10
+import datetime
+# Complete the function to add 90 days to the given date and return the new date
+def add90Days(someDate):
+        ninetyDays = datetime.timedelta(days=90)
+        finalDate = someDate + ninetyDays
+        return finalDate
+# expected output: 2018-12-30
+print(add90Days(datetime.date(2018, 10, 1)))
+
+# expected output: 2015-05-12
+print(add90Days(datetime.date(2015, 2, 11)))
